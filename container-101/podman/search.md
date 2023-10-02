@@ -11,15 +11,18 @@ input:
 podman search fedora
 ```
 
+
+````
 cat /etc/containers/registries.conf
+```
+
 https://github.com/containers/image/blob/main/docs/containers-registries.conf.5.md
 
 ```
 ...
-
 unqualified-search-registries = ["registry.fedoraproject.org", "docker.io", "quay.io"]
-
 ...
+
 ```
 
 
@@ -37,3 +40,5 @@ quay.io/fedora/fedora
 quay.io/skiffos/skiff-core-fedora              
 quay.io/containerdisks/fedora                  # Fedora Containerdisk Images  <img src="htt...
 ```
+
+However, https://hub.docker.com/ provide much useful information.

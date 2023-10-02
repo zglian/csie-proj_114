@@ -16,12 +16,8 @@
         "text": "pod.md"
       },
       {
-        "title": "namespaces information",
-        "text": "ns.md"
-      },
-      {
-        "title": "cgroup information",
-        "text": "cgroup.md"
+        "title": "info",
+        "text": "info.md"
       }
     ]
   },

@@ -1,0 +1,16 @@
+
+{
+  "title": "namespaces",
+  "description": "Learn basic podman/docker commands",
+  "details": {
+    "steps": [
+      {
+        "title": "namespaces information",
+        "text": "ns.md"
+      }
+    ]
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "title": "dockerfile",
+  "description": "Learn build container image by dockerfile",
+  "details": {
+    "steps": [
+      {
+        "title": "simple dockerfile",
+        "text": "simple.md"
+      },
+      {
+        "title": "multi-stage",
+        "text": "multi-stage-build.md"
+      }
+    ]
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

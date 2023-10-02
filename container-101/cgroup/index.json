@@ -1,0 +1,16 @@
+
+{
+  "title": "cgroup",
+  "description": "Learn basic podman/docker commands",
+  "details": {
+    "steps": [
+      {
+        "title": "cgroup information",
+        "text": "cgroup_v2.md"
+      }
+    ]
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
