@@ -1,0 +1,31 @@
+{
+  "title": "podman",
+  "description": "Learn basic podman/docker commands",
+  "details": {
+    "steps": [
+      {
+        "title": "search",
+        "text": "search.md"
+      },
+      {
+        "title": "Run a container",
+        "text": "run.md"
+      },
+      {
+        "title": "pod",
+        "text": "pod.md"
+      },
+      {
+        "title": "namespaces information",
+        "text": "ns.md"
+      },
+      {
+        "title": "cgroup information",
+        "text": "cgroup.md"
+      }
+    ]
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
