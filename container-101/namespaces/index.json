@@ -7,6 +7,10 @@
       {
         "title": "namespaces information",
         "text": "ns.md"
+      },
+      {
+        "title": "unshare",
+        "text": "unshare.md"
       }
     ]
   },
