@@ -1,1 +1,1 @@
-For grouping scenarios into courses check https://github.com/killercoda/scenario-examples-courses
+slide: https://docs.google.com/presentation/d/1ob96PoG-oqNVKN8I-blmYdaf3njAoY7SbCDEcI1Qq-s

@@ -1,0 +1,23 @@
+{
+  "title": "kind",
+  "description": "Learn container/k8s by kind",
+  "details": {
+    "steps": [
+      {
+        "title": "systemd-in-container.md",
+        "text": "systemd-in-container.md"
+      },
+      {
+        "title": "containerd",
+        "text": "crictl.md"
+      },
+      {
+        "title": "k8s cri cli",
+        "text": "cri.md"
+      }
+    ]
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
