@@ -1,10 +1,9 @@
-
 ## Cgroupv1
 
 有多個控制器，可以針對不同的資源進行管理（memory,CPU...）
 
 ```Shell
-**~$ mount -t cgroup**
+~$ mount -t cgroup
 cgroup on /sys/fs/cgroup/systemd type cgroup (rw,nosuid,nodev,noexec,relatime,xattr,name=systemd)
 cgroup on /sys/fs/cgroup/freezer type cgroup (rw,nosuid,nodev,noexec,relatime,freezer)
 cgroup on /sys/fs/cgroup/pids type cgroup (rw,nosuid,nodev,noexec,relatime,pids)
@@ -20,11 +19,11 @@ cgroup on /sys/fs/cgroup/devices type cgroup (rw,nosuid,nodev,noexec,relatime,de
 ```
 在memory中新增名字為democgv1的cgroup
 ```Shell
-**~$ mkdir /sys/fs/cgroup/memory/democgv1** 
+~$ mkdir /sys/fs/cgroup/memory/democgv1
 ```
 自動產生好控制資源 (Memory) 時所需要的組態檔案
 ```Shell
-**~$ ls -l /sys/fs/cgroup/memory/democgv1**
+~$ ls -l /sys/fs/cgroup/memory/democgv1
 total 0
 -rw-r--r-- 1 root root 0 Sep 29 13:39 cgroup.clone_children
 --w--w--w- 1 root root 0 Sep 29 13:39 cgroup.event_control
@@ -62,19 +61,19 @@ total 0
 ## Cgroupv1切換到 Cgroupv2
 
 ```Shell
-**~$ echo 'GRUB_CMDLINE_LINUX_DEFAULT="${GRUB_CMDLINE_LINUX_DEFAULT} systemd.unified_cgroup_hierarchy=1"' | sudo tee /etc/default/grub.d/70-cgroup-unified.cfg
+~$ echo 'GRUB_CMDLINE_LINUX_DEFAULT="${GRUB_CMDLINE_LINUX_DEFAULT} systemd.unified_cgroup_hierarchy=1"' | sudo tee /etc/default/grub.d/70-cgroup-unified.cfg
 ~$ sudo update-grub
-~$ sudo reboot -h now**
+~$ sudo reboot -h now
 # 重新開機登入機器後，透過下面指令檢查該檔案是否存在來判斷 cgroup v2 啟用與否
-**~$ ls /sys/fs/cgroup/cgroup.controllers**
+~$ ls /sys/fs/cgroup/cgroup.controllers
 ```
 
 ## Cgroupv2
 
 ```Shell
-**~$ mount | grep cgroup**
+~$ mount | grep cgroup
 cgroup2 on /sys/fs/cgroup type cgroup2 (rw,nosuid,nodev,noexec,relatime,nsdelegate)
-**~$ ls -l /sys/fs/cgroup**
+~$ ls -l /sys/fs/cgroup
 total 0
 -r--r--r--  1 root root 0 Sep 29 14:13 cgroup.controllers
 -rw-r--r--  1 root root 0 Sep 29 14:20 cgroup.max.depth
@@ -100,8 +99,8 @@ drwxr-xr-x  3 root root 0 Sep 29 14:13 user.slice
 ```
 新增一個cgroup
 ```Shell
-**~$ mkdir /sys/fs/cgroup/democgv2
-~$ ls -l /sys/fs/cgroup/democgv2**
+~$ mkdir /sys/fs/cgroup/democgv2
+~$ ls -l /sys/fs/cgroup/democgv2
 total 0
 -r--r--r-- 1 root root 0 Sep 29 14:25 cgroup.controllers
 -r--r--r-- 1 root root 0 Sep 29 14:25 cgroup.events
@@ -150,7 +149,7 @@ total 0
 ```
 利用修改cgroup.controllers來設定cgroup 可以使用哪一些 Subsystem
 ```Shell
-**~$ cat /sys/fs/cgroup/cgroup.controllers**
+~$ cat /sys/fs/cgroup/cgroup.controllers
 cpuset cpu io memory hugetlb pids rdma
 ``` 
 reference: <https://medium.com/starbugs/第一千零一篇的-cgroups-介紹-a1c5005be88c>
