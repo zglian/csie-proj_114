@@ -1,0 +1,20 @@
+
+{
+  "title": "namespaces",
+  "description": "Learn basic podman/docker commands",
+  "details": {
+    "steps": [
+      {
+        "title": "namespaces information",
+        "text": "ns.md"
+      },
+      {
+        "title": "unshare",
+        "text": "unshare.md"
+      }
+    ]
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

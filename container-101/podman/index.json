@@ -1,0 +1,27 @@
+{
+  "title": "podman",
+  "description": "Learn basic podman/docker commands",
+  "details": {
+    "steps": [
+      {
+        "title": "search",
+        "text": "search.md"
+      },
+      {
+        "title": "Run a container",
+        "text": "run.md"
+      },
+      {
+        "title": "pod",
+        "text": "pod.md"
+      },
+      {
+        "title": "info",
+        "text": "info.md"
+      }
+    ]
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
