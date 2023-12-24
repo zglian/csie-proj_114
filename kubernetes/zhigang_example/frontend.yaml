@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: zhigang-app-service
+spec:
+  selector:
+    app: zhigang-node-web-app
+  ports:
+    - protocol: "TCP"
+      port: 8080
+      targetPort: 3000
+      nodePort: 32700
+  type: NodePort
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zhigang-node-web-app
+spec:
+  selector:
+    matchLabels:
+      app: zhigang-node-web-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: zhigang-node-web-app
+    spec:
+      containers:
+        - name: node-web-app-zhigang
+          image: zglian/node-web-app
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+
